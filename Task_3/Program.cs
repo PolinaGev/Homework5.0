@@ -1,19 +1,20 @@
-﻿int[] RandomArray(int size)
+double[] RandomArray(int size)
 {
-int[] array = new int[size];
+double[] array = new double[size];
+Random rand = new Random();
 
 for (int i = 0; i < array.Length; i++)
 {
-array[i] = new Random().Next(100);
+array[i] = rand.Next(100)/10.0;
 }
 
 return array;
 }
 
-int Sum(int[] array)
+double Sum(double[] array)
 {
-int max = 1;
-int min = array[0];
+double max = 1;
+double min = array[0];
 for (int i = 0; i < array.Length; i++)
 {
 if (array[i] > max)
@@ -28,7 +29,7 @@ else if(array[i] <= min)
 
 return max - min;
 }
-int[] array = RandomArray(5);
+double[] array = RandomArray(5);
 
 Console.WriteLine($"[{string.Join(", ", array)}]");
 
