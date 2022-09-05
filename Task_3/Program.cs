@@ -1,4 +1,4 @@
-﻿double[] RandomArray(int size)
+﻿int[] RandomArray(int size)
 {
 int[] array = new int[size];
 
